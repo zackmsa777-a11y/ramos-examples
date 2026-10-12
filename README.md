@@ -1,13 +1,13 @@
 # Ramos examples
 
-Small, runnable native Ramos programs for **Ramos 0.21.0**, on Linux x64 and
+Small, runnable native Ramos programs for **Ramos 0.22.0**, on Linux x64 and
 Windows x64. Part of the [Ramos project hub](https://github.com/zackmsa777-a11y/ramos/blob/main/docs/ecosystem.md).
 All runtime code is Ramos; Python is optional setup and test tooling.
 
 ## Start here
 
 Clone this repository, then download `ramos-linux-x86_64` or `ramos.exe` from the
-[0.20.0 release](https://github.com/zackmsa777-a11y/ramos/releases/tag/v0.21.0).
+[0.20.0 release](https://github.com/zackmsa777-a11y/ramos/releases/tag/v0.22.0).
 On Linux rename the download to `ramos` and run `chmod +x ramos`.
 Alternatively, Python 3 installs the pinned binary with a SHA-256 check:
 
@@ -107,3 +107,7 @@ It accepts one signed int64 per line from stdin or a streamed file, keeps
 duplicates, and rejects malformed input or more than 131072 numbers with a line
 number and exit 2. The input is read/validated before output begins.
 See [collection ownership and limits](https://github.com/zackmsa777-a11y/ramos/blob/main/docs/collections.md).
+
+The `deep_recursion.ramos` example preserves pending values through 501 recursive
+frames and prints `125250`. The compiler now checks both a 1,024-call limit
+and a 4 MiB stack budget; see the [stack policy](https://github.com/zackmsa777-a11y/ramos/blob/main/docs/stack-budget.md).

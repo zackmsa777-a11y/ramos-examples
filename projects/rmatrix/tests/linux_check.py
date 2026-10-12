@@ -29,6 +29,11 @@ class Session:
         assert self.p.poll() is None, (self.p.returncode,self.raw[-2000:])
         return out
     def key(self,keys):os.write(self.master,keys);return self.read(.15)
+    def until(self,predicate,label):
+        deadline=time.monotonic()+2
+        while not predicate():
+            assert time.monotonic()<deadline, label
+            self.read(.025)
     def snapshot(self):return [[self.screen.buffer[y][x] for x in range(self.width)] for y in range(self.height)]
     def resize(self,width,height):
         fcntl.ioctl(self.master,termios.TIOCSWINSZ,struct.pack('HHHH',height,width,0,0))
@@ -55,9 +60,9 @@ s.key(b'?');assert s.snapshot()==snapshot,'Closing help did not restore scene/st
 s.key(b'\t');assert 'RMATRIX / SCENES' in '\n'.join(s.screen.display)
 s.key(b'\t');assert s.snapshot()==snapshot,'Closing picker did not restore scene/styles'
 s.key(b'n');s.key(b'n');assert s.snapshot()==snapshot,'Name overlay toggle left ghost cells'
-s.resize(10,4);assert 'Resize' in '\n'.join(s.screen.display)
+s.resize(10,4);s.until(lambda:'Resize' in '\n'.join(s.screen.display),'tiny-terminal redraw')
 assert len(s.read(.3))==0,'Small terminal still redraws'
-s.resize(80,24);assert 'PAUSED' in s.screen.display[-1]
+s.resize(80,24);s.until(lambda:'PAUSED' in s.screen.display[-1],'paused HUD after resize')
 assert len(s.read(.3))==0,'Resize did not settle while paused'
 s.key(b'h');s.key(b'h');assert 'PAUSED' in s.screen.display[-1]
 s.key(b' ');assert len(s.read(.15))>0,'Resume failed'

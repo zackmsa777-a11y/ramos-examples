@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/zackmsa777-a11y/ramos",
-  "version": "0.21.0",
-  "commit": "0091e4ec850ea97eda36982a570b13a0f23dea3e",
+  "version": "0.22.0",
+  "commit": "c01b06eaae2df2b6879f87c911fbebbc7a140237",
   "files": [
     {
       "path": "examples/buffers.ramos",
@@ -14,6 +14,10 @@
     {
       "path": "examples/control_flow.ramos",
       "sha256": "466ef246fad93e9eb97b96498400610c38c5b505091009a09f4377db746c8002"
+    },
+    {
+      "path": "examples/deep_recursion.ramos",
+      "sha256": "5c5d3d5c7dd1f7e89c8062b7aebeeab42c2858530706a6d1c40b55e7fbc25c3a"
     },
     {
       "path": "examples/easier_syntax.ramos",

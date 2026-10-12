@@ -5,16 +5,16 @@ import platform
 import urllib.request
 
 ROOT = Path(__file__).resolve().parents[1]
-VERSION = "0.21.0"
+VERSION = "0.22.0"
 ASSETS = {
-    "Linux": ("ramos-linux-x86_64", "ramos", "e240393b8783023c6cc3a123a9961c98f2e3bfc74ef51d2df5de9914f8344e5b"),
-    "Windows": ("ramos.exe", "ramos.exe", "82eb517d4a703cd515a6ffdc5d8817d3030cea4a86a1a82105c045cdbcd1065a"),
+    "Linux": ("ramos-linux-x86_64", "ramos", "a034ea48f838c056c87c085450f0e96e727247b91f098d281f9ec4fa8cc801cc"),
+    "Windows": ("ramos.exe", "ramos.exe", "b7bd3d7111579eee77dc3fc25ebbb572622e53f044639f0cb7428055100bc6f6"),
 }
 
 def install():
     system = platform.system()
     if platform.machine().lower() not in ("x86_64", "amd64") or system not in ASSETS:
-        raise SystemExit("Ramos 0.21.0 requires Linux x64 or Windows x64")
+        raise SystemExit("Ramos 0.22.0 requires Linux x64 or Windows x64")
     asset, filename, sha = ASSETS[system]
     path = ROOT / filename
     if path.exists() and hashlib.sha256(path.read_bytes()).hexdigest() == sha:
