@@ -1,13 +1,13 @@
 # Ramos examples
 
-Small, runnable native Ramos programs for **Ramos 0.20.0**, on Linux x64 and
+Small, runnable native Ramos programs for **Ramos 0.21.0**, on Linux x64 and
 Windows x64. Part of the [Ramos project hub](https://github.com/zackmsa777-a11y/ramos/blob/main/docs/ecosystem.md).
 All runtime code is Ramos; Python is optional setup and test tooling.
 
 ## Start here
 
 Clone this repository, then download `ramos-linux-x86_64` or `ramos.exe` from the
-[0.20.0 release](https://github.com/zackmsa777-a11y/ramos/releases/tag/v0.20.0).
+[0.20.0 release](https://github.com/zackmsa777-a11y/ramos/releases/tag/v0.21.0).
 On Linux rename the download to `ramos` and run `chmod +x ramos`.
 Alternatively, Python 3 installs the pinned binary with a SHA-256 check:
 
@@ -92,3 +92,18 @@ Find the five repositories through the hub and the shared `ramos` topic.
 [Benchmarks](https://github.com/zackmsa777-a11y/ramos-benchmarks)
 
 Browse the shared [Ramos topic](https://github.com/topics/ramos).
+
+## Native integer sorting
+
+`rsort` uses the 0.21 list capacity/status and constant-storage sorting helpers:
+
+```sh
+./ramos build examples/rsort.ramos -o build/rsort
+printf '3\n-4\n3\n0\n' | ./build/rsort
+./build/rsort numbers.txt
+```
+
+It accepts one signed int64 per line from stdin or a streamed file, keeps
+duplicates, and rejects malformed input or more than 131072 numbers with a line
+number and exit 2. The input is read/validated before output begins.
+See [collection ownership and limits](https://github.com/zackmsa777-a11y/ramos/blob/main/docs/collections.md).

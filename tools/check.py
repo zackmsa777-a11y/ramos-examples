@@ -26,6 +26,9 @@ def run(name, *args, data=b"", code=0):
     assert p.returncode == code, (name,p.returncode,p.stderr)
     return p.stdout.replace(b"\r\n", b"\n")
 assert run("hello") == b"Hello, Ramos!\n"
+assert run("rsort", data=b"3\n-4\n3\n0\n") == b"-4\n0\n3\n3\n"
+assert run("rsort", data=b"") == b""
+assert run("rsort", data=b"1\nbad\n", code=2) == b""
 assert run("line_stats", data="hello\n🌍\n".encode()) == "1: hello\n2: 🌍\nlines=2 characters=6 longest=5\n".encode()
 assert run("rstats", data=b"1\n2\n3\n") == b"count=3\nmin=1.000000\nmax=3.000000\nsum=6.000000\nmean=2.000000\n"
 run("rstats", data=b"invalid\n", code=2)
@@ -33,6 +36,9 @@ with tempfile.TemporaryDirectory() as directory:
     root = Path(directory)
     source, dest = root/"source.txt", root/"copy.txt"
     source.write_bytes("one\nneedle 🌍\nlast\n".encode())
+    numbers = root/"numbers é.txt"
+    numbers.write_bytes(b"9223372036854775807\r\n-9223372036854775808\r\n0")
+    assert run("rsort", numbers) == b"-9223372036854775808\n0\n9223372036854775807\n"
     assert run("rnumber", source) == "1: one\n2: needle 🌍\n3: last\n".encode()
     assert run("rgrep", "needle", source).endswith(":2:needle 🌍\n".encode())
     run("rgrep", "missing", source, code=1)
@@ -40,7 +46,7 @@ with tempfile.TemporaryDirectory() as directory:
     assert dest.read_bytes() == source.read_bytes()
     run("rcopy", source, dest, code=1)
     assert dest.read_bytes() == source.read_bytes()
-print("40 target builds and 10 CLI acceptance checks passed")
+print("42 example target builds and 14 CLI acceptance checks passed")
 
 project = ROOT / "projects/rmatrix"
 for target, ending in [("linux", ""), ("windows", ".exe")]:

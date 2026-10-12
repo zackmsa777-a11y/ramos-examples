@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/zackmsa777-a11y/ramos",
-  "version": "0.20.0",
-  "commit": "5778cee06f3e95d5bd178ac7aa5a44c6cd19bc4e",
+  "version": "0.21.0",
+  "commit": "0091e4ec850ea97eda36982a570b13a0f23dea3e",
   "files": [
     {
       "path": "examples/buffers.ramos",
@@ -72,6 +72,10 @@
       "sha256": "da7db3acdaab7f45d7919d9fabc788f55744f786a8cbfffb03153ed022631f61"
     },
     {
+      "path": "examples/rsort.ramos",
+      "sha256": "0a9ddb47e429280097f1ad4c4b3392e7dce785051133c492264b1ea9b642a49d"
+    },
+    {
       "path": "examples/rstats.ramos",
       "sha256": "d2b8ecc538655fa5de4e7e38a332461e800408e1d383cc4b546fbc8d4c4c1d44"
     },
@@ -101,11 +105,11 @@
     },
     {
       "path": "stdlib/lists.ramos",
-      "sha256": "408be40b2709bccb9889ed4b03cf37db10415ea987085e816488e326c3d8333c"
+      "sha256": "1bc807e8b4b7d2cb7ab70fc54149e620c3fd2369be35cebcd68f137412a9928c"
     },
     {
       "path": "stdlib/maps.ramos",
-      "sha256": "ea898314946f7ec9868dea971dee8c1decc72ce3e232f8f002b273930be735ac"
+      "sha256": "05a20d866a412e209df5ae3024095bfec509a2879d748144fd6ad41381bc1cc2"
     },
     {
       "path": "stdlib/math.ramos",
