@@ -1,0 +1,16 @@
+{
+  "upstream_rust_repository": "https://github.com/zackmsa777-a11y/nmatrix",
+  "upstream_rust_commit": "66a64d1bb85f0c726ff2caa4845847d4d4cef94f",
+  "port_origin": "Existing /home/ubuntu/rmatrix port, backed up before changes",
+  "original_source_sha256": {
+    "common.ramos": "a3b7429c822f0b6810793d59376ad5ec4757a78e00596496faa816ae66fa93cf",
+    "font.ramos": "15323b7deade047dc54d405f75866a88e09d2bc951b22e45d3e4222e9f26c533",
+    "render.ramos": "753f6ee0080e1aaa5160521061beb64289c5b83cdff123f49c0d404c664d4aa7",
+    "rmatrix.ramos": "ce16c441d3301c26ed67d45f6d676733a6b02e50017013e49bed94850c0b83e6",
+    "scenes_a.ramos": "7f8df34ebdab80264293964f8a6ba899ee055d490865e33efd1415f680a5ee51",
+    "scenes_b.ramos": "3bf13003c50257332536f15bc746a3dc626ae705c9a3cf97f2574a7c622398ef"
+  },
+  "original_executable_sha256": "41cf57bd6ba603bbeb7c6d57f8c4191dd048778a0653fe8673d377aa437e34db",
+  "minimum_compiler_version": "0.20.0",
+  "reference_renderer_adaptation": "Original full-grid emitter with explicit ANSI intensity reset; tests compare its screen against changed-cell output."
+}

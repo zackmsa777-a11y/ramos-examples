@@ -2,6 +2,7 @@
 from pathlib import Path
 import platform
 import subprocess
+import sys
 import tempfile
 from compiler import install
 from provenance import check_sources
@@ -40,3 +41,18 @@ with tempfile.TemporaryDirectory() as directory:
     run("rcopy", source, dest, code=1)
     assert dest.read_bytes() == source.read_bytes()
 print("40 target builds and 10 CLI acceptance checks passed")
+
+project = ROOT / "projects/rmatrix"
+for target, ending in [("linux", ""), ("windows", ".exe")]:
+    subprocess.run([str(compiler), "build", str(project / "rmatrix.ramos"),
+                    "-o", str(BUILD / ("rmatrix" + ending)), "--target", target,
+                    "--force"], check=True, cwd=ROOT)
+assert run("rmatrix", "--version").startswith(b"rmatrix 0.2.0")
+assert b"plasma" in run("rmatrix", "--help")
+run("rmatrix", "--not-a-flag", code=2)
+subprocess.run([sys.executable, str(project / "tests/render_check.py"),
+                str(compiler)], check=True, cwd=ROOT)
+if not windows:
+    subprocess.run([sys.executable, str(project / "tests/linux_check.py"),
+                    str(BUILD / "rmatrix")], check=True, cwd=ROOT)
+print("rmatrix: both targets, CLI behavior and reference renderer checks passed")

@@ -1,13 +1,13 @@
 # Ramos examples
 
-Small, runnable native Ramos programs for **Ramos 0.19.1**, on Linux x64 and
+Small, runnable native Ramos programs for **Ramos 0.20.0**, on Linux x64 and
 Windows x64. Part of the [Ramos project hub](https://github.com/zackmsa777-a11y/ramos/blob/main/docs/ecosystem.md).
 All runtime code is Ramos; Python is optional setup and test tooling.
 
 ## Start here
 
 Clone this repository, then download `ramos-linux-x86_64` or `ramos.exe` from the
-[0.19.1 release](https://github.com/zackmsa777-a11y/ramos/releases/tag/v0.19.1).
+[0.20.0 release](https://github.com/zackmsa777-a11y/ramos/releases/tag/v0.20.0).
 On Linux rename the download to `ramos` and run `chmod +x ramos`.
 Alternatively, Python 3 installs the pinned binary with a SHA-256 check:
 
@@ -54,9 +54,17 @@ or OS tools. `rcopy` and Notes refuse to overwrite existing files. `rview` needs
 an interactive terminal. The small arithmetic `calculator` example is distinct
 from the larger [scientific calculator](https://github.com/zackmsa777-a11y/ramos-calculator).
 
+## Larger terminal project
+
+[rmatrix](projects/rmatrix/README.md) adds twelve animations with changed-cell
+rendering, elapsed-time frame pacing, overlays and keyboard controls. Its source
+is Ramos; its Python terminal model is a test tool. See its measured app-specific
+[performance](projects/rmatrix/PERFORMANCE.md).
+
 ## Check and contribute
 
 ```sh
+python -m pip install -r requirements-test.txt
 python tools/check.py
 ```
 

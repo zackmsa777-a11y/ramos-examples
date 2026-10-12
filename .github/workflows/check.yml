@@ -17,5 +17,7 @@ jobs:
       - name: Install Linux GUI dependencies
         if: runner.os == 'Linux'
         run: sudo apt-get update && sudo apt-get install -y libgtk-3-0 xvfb xdotool xclip
+      - name: Install test-only terminal model
+        run: python -m pip install -r requirements-test.txt
       - name: Check pinned sources and programs
         run: python tools/check.py

@@ -1,7 +1,7 @@
 {
   "repository": "https://github.com/zackmsa777-a11y/ramos",
-  "version": "0.19.1",
-  "commit": "6c263c5023bc8a71c036d9b8151b82dc558adfde",
+  "version": "0.20.0",
+  "commit": "5778cee06f3e95d5bd178ac7aa5a44c6cd19bc4e",
   "files": [
     {
       "path": "examples/buffers.ramos",
