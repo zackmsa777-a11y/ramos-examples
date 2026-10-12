@@ -1,0 +1,139 @@
+{
+  "repository": "https://github.com/zackmsa777-a11y/ramos",
+  "version": "0.19.1",
+  "commit": "6c263c5023bc8a71c036d9b8151b82dc558adfde",
+  "files": [
+    {
+      "path": "examples/buffers.ramos",
+      "sha256": "e96a8cfbd8d3e513aada116e3ce4914fead37780da822bfb59a27a0e0f84616c"
+    },
+    {
+      "path": "examples/calculator.ramos",
+      "sha256": "ce0e623e44f3084f72cad91bbb7fec1d820cd2b607f4b9190e356a12afa90b97"
+    },
+    {
+      "path": "examples/control_flow.ramos",
+      "sha256": "466ef246fad93e9eb97b96498400610c38c5b505091009a09f4377db746c8002"
+    },
+    {
+      "path": "examples/easier_syntax.ramos",
+      "sha256": "60e9f9cbe7f5ce2f2c47cf4d441636d3658940229c1509fb9e8d761698865d65"
+    },
+    {
+      "path": "examples/functions.ramos",
+      "sha256": "aa97d146ee8b6fc14229258a81bfcf3c826b4493c14b8968cf0d93b872cffb74"
+    },
+    {
+      "path": "examples/gui_hello.ramos",
+      "sha256": "fb2994015ca06d45f58c3e6514c46f0735bbd1115624ea305296f91dbf404216"
+    },
+    {
+      "path": "examples/hello.ramos",
+      "sha256": "e9de268ee5ab5b121bb65d620d3ecdb19c09a7a9a4f158282a85a8fc4f03081f"
+    },
+    {
+      "path": "examples/input.ramos",
+      "sha256": "955574ce0ec9b826a9f6de2d74e58bc116890a4c8f104da64443cddb1be27c2d"
+    },
+    {
+      "path": "examples/library_demo.ramos",
+      "sha256": "6d4f3be78e79524e4f458e00c581db7e1b32d1c4be67095ecdee9df123e3be2a"
+    },
+    {
+      "path": "examples/line_stats.ramos",
+      "sha256": "68761c934d77b74296280d628db7492d19a342c0f42bf27102f88d16e13ba548"
+    },
+    {
+      "path": "examples/mandelbrot.ramos",
+      "sha256": "3924077f2dc447db640e80dc7c7ceb723aacb669d7e3776b2baab8adf6f0be02"
+    },
+    {
+      "path": "examples/notes.ramos",
+      "sha256": "73eb8dd50ab62bb04fbf25177d44d745417f4d72fa11a3e13ed0354ae43e7f0c"
+    },
+    {
+      "path": "examples/rcopy.ramos",
+      "sha256": "7f75f3f8da8b3d4898dd56321cbcebabe47ae780277f2b9f621391393eedad6e"
+    },
+    {
+      "path": "examples/rfind.ramos",
+      "sha256": "2a7dd4b35334b92d7cf7f8949e52e0a82949e332dd2e51ba93df17e3932e8b0f"
+    },
+    {
+      "path": "examples/rgrep.ramos",
+      "sha256": "d687175929a0121b8d2c1740dc09552ce1f4ad2e5f2a44121c970d8d56f408ca"
+    },
+    {
+      "path": "examples/rnumber.ramos",
+      "sha256": "2de2dd11a602291a431f71ce9a13b49f432f7289b192c3958b32e42239c59ecf"
+    },
+    {
+      "path": "examples/rrun.ramos",
+      "sha256": "da7db3acdaab7f45d7919d9fabc788f55744f786a8cbfffb03153ed022631f61"
+    },
+    {
+      "path": "examples/rstats.ramos",
+      "sha256": "d2b8ecc538655fa5de4e7e38a332461e800408e1d383cc4b546fbc8d4c4c1d44"
+    },
+    {
+      "path": "examples/rview.ramos",
+      "sha256": "8a5fb866bd1a179456d6e9e59e93bc89a5b58cb47d35765fdcf07eb12d8c89ef"
+    },
+    {
+      "path": "examples/usability.ramos",
+      "sha256": "35105c387ea72aca7a1bf94c650a28fd4a23159d275e134777ed43f8fa553910"
+    },
+    {
+      "path": "stdlib/bytes.ramos",
+      "sha256": "bc8acc151392cefed044c6882a23837e41dac141c8c14fe6c066877ace7c9540"
+    },
+    {
+      "path": "stdlib/cli.ramos",
+      "sha256": "89a9e4b6b5426d6e5cf9ab8f0fb34e3e2c0b765c240d6c373e97675956f13982"
+    },
+    {
+      "path": "stdlib/gui.ramos",
+      "sha256": "52af9aec37a49b7c71f1e6e0d040a04e0be7224878ca0f7536798d5982b5db7c"
+    },
+    {
+      "path": "stdlib/io.ramos",
+      "sha256": "b346964fcf1c2da43f826411e31e97c2b760e5dfbd4dd4f318828f8be846cd6f"
+    },
+    {
+      "path": "stdlib/lists.ramos",
+      "sha256": "408be40b2709bccb9889ed4b03cf37db10415ea987085e816488e326c3d8333c"
+    },
+    {
+      "path": "stdlib/maps.ramos",
+      "sha256": "ea898314946f7ec9868dea971dee8c1decc72ce3e232f8f002b273930be735ac"
+    },
+    {
+      "path": "stdlib/math.ramos",
+      "sha256": "4ed5c45620351f329ff9faf4fbec19a9e14a008e58b85971ac7adcface92e063"
+    },
+    {
+      "path": "stdlib/numbers.ramos",
+      "sha256": "41052263d2157dc36b17a2929c078f6e56316ea42efa20d1836d6180ec90c2ad"
+    },
+    {
+      "path": "stdlib/path.ramos",
+      "sha256": "5180bcfb1e9e23483050e42f356e6384993065dd9d66f0fe9eadca0ad7cd22e0"
+    },
+    {
+      "path": "stdlib/process.ramos",
+      "sha256": "9631db00b884e4f64d4216f55364d772e4419308b9663e5508d6404589a67a22"
+    },
+    {
+      "path": "stdlib/system.ramos",
+      "sha256": "f44fb27bd9ea70118b5b63f83329b4d5388f1a9935dc2fe5c50060adbce59235"
+    },
+    {
+      "path": "stdlib/text.ramos",
+      "sha256": "941cfa3c3daeac2f2f4946d9197f904fc4c8067c965b01c0df00caa4bd5e5a62"
+    },
+    {
+      "path": "stdlib/tui.ramos",
+      "sha256": "fb69fa7686b371b13b43a420ea157efc7eb58ce225cebf2cd51bbe9da5df1a31"
+    }
+  ]
+}
