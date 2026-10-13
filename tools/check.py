@@ -13,7 +13,7 @@ BUILD = ROOT / "build"
 BUILD.mkdir(exist_ok=True)
 windows = platform.system() == "Windows"
 for source in sorted((ROOT / "examples").glob("*.ramos")):
-    gui = source.stem in ("notes", "gui_hello", "plot")
+    gui = source.stem in ("notes", "gui_hello", "plot", "scaling")
     for target, suffix in [("linux", ""), ("windows", ".exe")]:
         cmd = [str(compiler), "build", str(source), "-o", str(BUILD / (source.stem + suffix)),
                "--target", target, "--force"]
@@ -48,7 +48,7 @@ with tempfile.TemporaryDirectory() as directory:
     assert dest.read_bytes() == source.read_bytes()
     run("rcopy", source, dest, code=1)
     assert dest.read_bytes() == source.read_bytes()
-print("48 example target builds and 16 CLI acceptance checks passed")
+print("50 example target builds and 16 CLI acceptance checks passed")
 
 project = ROOT / "projects/rmatrix"
 for target, ending in [("linux", ""), ("windows", ".exe")]:

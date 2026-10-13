@@ -1,13 +1,13 @@
 # Ramos examples
 
-Small, runnable native Ramos programs for **Ramos 0.24.0**, on Linux x64 and
+Small, runnable native Ramos programs for **Ramos 0.25.0 preview**, on Linux x64 and
 Windows x64. Part of the [Ramos project hub](https://github.com/zackmsa777-a11y/ramos/blob/main/docs/ecosystem.md).
 All runtime code is Ramos; Python is optional setup and test tooling.
 
 ## Start here
 
 Clone this repository, then download `ramos-linux-x86_64` or `ramos.exe` from the
-[0.20.0 release](https://github.com/zackmsa777-a11y/ramos/releases/tag/v0.24.0).
+[0.25.0 preview](https://github.com/zackmsa777-a11y/ramos/releases/tag/v0.25.0).
 On Linux rename the download to `ramos` and run `chmod +x ramos`.
 Alternatively, Python 3 installs the pinned binary with a SHA-256 check:
 
@@ -122,3 +122,9 @@ The compiler source repository verifies the actual plot on both desktops.
 
 `examples/math_output.ramos` demonstrates exact scientific and compact numerical
 output, including tiny nonzero values and ties-to-even rounding.
+
+The new `examples/scaling.ramos` opens a logical-coordinate window and logs
+actual DPI events. Follow the [Windows display test](https://github.com/zackmsa777-a11y/ramos/blob/v0.25.0/docs/gui-scaling.md).
+Initial Windows native checks and genuine GTK scale changes pass; genuine
+Windows display changes remain pending. The other examples keep their existing
+opening policy. No new speed claim.
