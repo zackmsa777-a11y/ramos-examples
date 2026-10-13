@@ -26,6 +26,7 @@ def run(name, *args, data=b"", code=0):
     assert p.returncode == code, (name,p.returncode,p.stderr)
     return p.stdout.replace(b"\r\n", b"\n")
 assert run("hello") == b"Hello, Ramos!\n"
+assert run("math_output") == b"1.00000e-100\n1e-100\n3.5\n2e+0\n4e+0\n1e+4\n4.9406564584124654e-324\n"
 assert run("deep_recursion") == b"125250\n"
 assert run("rsort", data=b"3\n-4\n3\n0\n") == b"-4\n0\n3\n3\n"
 assert run("rsort", data=b"") == b""
@@ -47,7 +48,7 @@ with tempfile.TemporaryDirectory() as directory:
     assert dest.read_bytes() == source.read_bytes()
     run("rcopy", source, dest, code=1)
     assert dest.read_bytes() == source.read_bytes()
-print("46 example target builds and 15 CLI acceptance checks passed")
+print("48 example target builds and 16 CLI acceptance checks passed")
 
 project = ROOT / "projects/rmatrix"
 for target, ending in [("linux", ""), ("windows", ".exe")]:
